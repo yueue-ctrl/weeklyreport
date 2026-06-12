@@ -1,0 +1,102 @@
+:root {
+	--el-canvas: #ffffff;
+	--el-canvas-soft: #fafafa;
+	--el-surface-card: #ffffff;
+	--el-surface-strong: #f0efed;
+	--el-surface-dark: #0c0a09;
+	--el-surface-dark-elevated: #1c1917;
+	--el-hairline: #e7e5e4;
+	--el-hairline-soft: #f0efed;
+	--el-hairline-strong: #d6d3d1;
+	--el-ink: #0c0a09;
+	--el-body: #4e4e4e;
+	--el-muted: #777169;
+	--el-muted-soft: #a8a29e;
+	--el-primary: #292524;
+	--el-primary-active: #0c0a09;
+	--el-on-primary: #ffffff;
+	--el-gradient-mint: #a7e5d3;
+	--el-gradient-peach: #f4c5a8;
+	--el-gradient-lavender: #c8b8e0;
+	--el-gradient-sky: #a8c8e8;
+	--el-gradient-rose: #e8b8c4;
+	--el-radius-lg: 12px;
+	--el-radius-xl: 16px;
+	--el-radius-xxl: 24px;
+	--el-radius-pill: 9999px;
+	--el-shadow-soft: 0 4px 16px rgba(0, 0, 0, 0.04);
+	--el-font-body: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+	--el-font-display: "EB Garamond", ui-serif, "Times New Roman", Georgia, serif;
+	--accent-color: var(--el-primary);
+	--bg-gray: var(--el-canvas-soft);
+	--card-bg: var(--el-surface-card);
+	--body-bg: var(--el-canvas);
+	--text-main: var(--el-ink);
+	--text-secondary: var(--el-muted);
+	--menu-bg: rgba(255, 255, 255, 0.92);
+	--table-border: var(--el-hairline);
+}
+
+body.dark-mode {
+	--accent-color: var(--el-on-primary);
+	--bg-gray: rgba(255, 255, 255, 0.08);
+	--card-bg: var(--el-surface-dark-elevated);
+	--body-bg: var(--el-surface-dark);
+	--text-main: var(--el-on-primary);
+	--text-secondary: var(--el-muted-soft);
+	--menu-bg: rgba(12, 10, 9, 0.9);
+	--table-border: rgba(255, 255, 255, 0.14);
+}
+
+body {
+	font-family: var(--el-font-body);
+	letter-spacing: 0.16px;
+}
+
+h1,
+h2,
+h3,
+.page-title {
+	font-family: var(--el-font-body);
+	letter-spacing: 0;
+}
+
+.profile-info,
+.page-date,
+.card-date,
+.report-link-date {
+	color: var(--text-secondary);
+}
+
+.zhoubao-card,
+.report-link-card {
+	border: 1px solid var(--table-border);
+	border-radius: var(--el-radius-xl);
+	box-shadow: none;
+}
+
+.zhoubao-card.expanded,
+.report-link-card:hover {
+	box-shadow: var(--el-shadow-soft);
+}
+
+.view-button {
+	background: var(--text-main);
+	color: var(--el-on-primary);
+	border-radius: var(--el-radius-pill);
+}
+
+.view-button:hover {
+	background: var(--el-primary-active);
+}
+
+.nav-btn,
+.hamburger-btn {
+	border-radius: var(--el-radius-pill);
+	box-shadow: none;
+	border: 1px solid var(--table-border);
+}
+
+.hamburger-btn:hover {
+	background-color: var(--bg-gray);
+}

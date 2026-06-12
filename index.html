@@ -404,6 +404,7 @@
 				background: #000;
 			}
 		</style>
+		<link rel="stylesheet" href="assets/elevenlabs.css" />
 	</head>
 	<body>
 		<button
@@ -454,7 +455,7 @@
 			</div>
 
 			<div class="latest-report">
-				<iframe class="report-iframe" id="latestReport" name="latestReport" src="week4/zhoubao4.html?embed=1" loading="lazy" allow="fullscreen; autoplay" allowfullscreen scrolling="no"></iframe>
+				<iframe class="report-iframe" id="latestReport" name="latestReport" src="week5/zhoubao5.html?embed=1" loading="lazy" allow="fullscreen; autoplay" allowfullscreen scrolling="no"></iframe>
 			</div>
 
 			<h2>往期周报</h2>
@@ -470,6 +471,12 @@
 
 		<script>
 			const reports = [
+				{
+					id: 'week5',
+					title: '第五周',
+					date: '2026.06.08 - 2026.06.12',
+					embedSrc: 'week5/zhoubao5.html?embed=1'
+				},
 				{
 					id: 'week4',
 					title: '第四周',
@@ -499,7 +506,7 @@
 			const latestReportFrame = document.getElementById('latestReport');
 			const archiveList = document.getElementById('archiveList');
 			const params = new URLSearchParams(window.location.search);
-			const currentReportId = params.get('report') || 'week4';
+			const currentReportId = params.get('report') || 'week5';
 			const currentReport = reports.find((report) => report.id === currentReportId) || reports[0];
 
 			latestReportFrame.src = currentReport.embedSrc;
