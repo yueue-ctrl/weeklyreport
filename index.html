@@ -455,7 +455,7 @@
 			</div>
 
 			<div class="latest-report">
-				<iframe class="report-iframe" id="latestReport" name="latestReport" src="week5/zhoubao5.html?embed=1" loading="lazy" allow="fullscreen; autoplay" allowfullscreen scrolling="no"></iframe>
+				<iframe class="report-iframe" id="latestReport" name="latestReport" src="week6/zhoubao6.html?embed=1" loading="lazy" allow="fullscreen; autoplay" allowfullscreen scrolling="no"></iframe>
 			</div>
 
 			<h2>往期周报</h2>
@@ -471,6 +471,12 @@
 
 		<script>
 			const reports = [
+				{
+					id: 'week6',
+					title: '第六周',
+					date: '2026.06.15 - 2026.06.18',
+					embedSrc: 'week6/zhoubao6.html?embed=1'
+				},
 				{
 					id: 'week5',
 					title: '第五周',
@@ -506,7 +512,7 @@
 			const latestReportFrame = document.getElementById('latestReport');
 			const archiveList = document.getElementById('archiveList');
 			const params = new URLSearchParams(window.location.search);
-			const currentReportId = params.get('report') || 'week5';
+			const currentReportId = params.get('report') || 'week6';
 			const currentReport = reports.find((report) => report.id === currentReportId) || reports[0];
 
 			latestReportFrame.src = currentReport.embedSrc;
